@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+  <body class="page">
+    <header class="page-header">
+      <nav class="main-nav">
+      	<a class="page-header__logo" href="index.html" aria-label="перейти на главную страницу">
+          <img class="page-header__logo-image" alt="Мишка, главная страница" src="http://placehold.it/150x100"> 
+        </a>
+
+        <a href="index.php?drop-menu" class="main-nav__toggle  main-nav__toggle--to-close">
+          <span class="visually-hidden">
+            Открыть меню
+          </span>
+        </a>
+        
+        <div class="main-nav__wrapper  main-nav__wrapper--opened">
+          <ul class="main-nav__list site-list  site-list__link--active">
+            <li class="site-list__item">
+              <a class="site-list__link" href="#">
+                Каталог товаров
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link">
+                Вязание на заказ
+              </a>
+            </li>
+          </ul>
+          <form class="main-nav__form  search-form" action="https://echo.htmlacademy.ru" method="get">
+            <button class="search-form__button" type="submit"><span class="visually-hidden">Найти</span></button>
+            <input class="search-form__field  search-form__field--closed" type="search" id="search-field" name="search-field">
+            <label class="search-form__label" for="search-field">Поиск по сайту</label>
+          </form>
+          <a class="main-nav__cart  site-cart" href="index.php?cart"><!--cart-icon - ::before псевдоэлемент блочной ссылки-->
+          	Корзина: <span class="site-cart__item-count">пока пуста</span><!--автоматически количество сделать-->
+          </a>
+        </div>
+      </nav>
+
+      <section class="header__content">
+        <h1 class="header__content--item  heading">Каталог товаров</h1>
+      </section>
+    </header>
+
+    <main class="page-content">
+      <article class="item">
+        <a class="item__link" href="#">
+          <div class="item__image-container">
+            <img class="item__image" alt="Игрушка вязаный зайчик в голубом костюме" src="http://placehold.it/150x100">
+          </div>
+          <h2 class="item__name  catalogue-tittle">
+            Зайчик-попрыгайчик
+          </h2>
+        </a>
+        <p class="item__info">Рост 30 см, вес 200 г</p>
+        <div class="item__to-buy">
+          <span class="item__price">1 200 руб.</span>
+          <a class="main-nav__cart  site-cart" href="index.php?cart" aria-label="Корзина">
+            <svg class="site-cart__icon"></svg>
+          </a>
+        </div>
+      </article>  
+
+      <article class="item">
+        <a class="item__link" href="#">
+          <div class="item__image-container">
+            <img class="item__image" alt="Игрушка вязаный зайчик в голубом костюме" src="http://placehold.it/150x100">
+          </div>
+          <h2 class="item__name  catalogue-tittle">
+            Корзинка для белья
+          </h2>
+        </a>
+        <p class="item__info">Диаметр 15 см, высота 10 см</p>
+        <div class="item__to-buy">
+          <span class="item__price">690 руб.</span>
+          <a class="main-nav__cart  site-cart" href="index.php?cart" aria-label="Корзина">
+            <svg class="site-cart__icon"></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="item">
+        <a class="item__link" href="#">
+          <div class="item__image-container">
+            <img class="item__image" alt="Игрушка вязаный зайчик в голубом костюме" src="http://placehold.it/150x100">
+          </div>
+          <h2 class="item__name  catalogue-tittle">
+            Большая корзинка для игрушек
+          </h2>
+        </a>
+        <p class="item__info">Диаметр 30 см, высота 30 см</p>
+        <div class="item__to-buy">
+          <span class="item__price">1 500 руб.</span>
+          <a class="main-nav__cart  site-cart" href="index.php?cart" aria-label="Корзина">
+            <svg class="site-cart__icon"></svg>
+          </a>
+        </div>
+      </article>    
+      
+      <article class="production-video">
+        <h2 class="production-video__tittle  catalogue-tittle">Процесс производства</h2>
+        <div class="production-video__container">
+          <video width="" height="" src="" poster="">
+          </video>
+          <button class="production-video__button" type=button>
+            <span class="visually-vidden">Play</span>
+          </button>
+        </div>
+        <p class="production-video__description">
+          По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+        </p>
+        <a class="production-video__checkout  button" href="cart.html">
+          Сделать заказ
+        </a> 
+      </article>
+    </main>
+
+    <footer class="page-footer">    
+      <section class="page-footer__social social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="#" class="social__link  social__link--vk" aria-label="Вконтакте"></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link  social__link--fb" aria-label="Facebook"></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link  social__link--ig" aria-label="Instagram"></a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="page-footer__copyright  copyright">
+      	<p class="copyright__text">
+      	  Разработано <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
+      	</p>
+      </section>
+    </footer>
+  </body>
+</html>
+
+<section class="modal-window  cart-window">
+  <h2 class="cart-window__title  section-title">Добавить в корзину</h2>
+  <p class="cart-window__text">Выберите размер:</p>
+    
+  <form class="modal-window__form  cart-window__form  size-picker" action="https://echo.htmlacademy.ru" method="post">
+    <input class="size-picker__input  visually-hidden" type="radio" id="size-s" name="sizes" value="size-s">
+    <input class="size-picker__input  visually-hidden" type="radio" id="size-m" name="sizes" value="size-m">
+    <input class="size-picker__input  visually-hidden" type="radio" id="size-l" name="sizes" value="size-l">
+
+    <label class="size-picker__label  size-picker__label--small" for="size-s">S</label>
+    <label class="size-picker__label  size-picker__label--medium" for="size-m">M</label>
+    <label class="size-picker__label  size-picker__label--large" for="size-l">L</label>
+
+    <button class="size-picker__button  button" type="submit">Добавить</button>
+  </form>
+</section>
