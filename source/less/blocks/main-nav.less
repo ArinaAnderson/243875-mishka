@@ -1,0 +1,79 @@
+.main-nav {
+  display: ;
+  width: ;
+
+  padding: 0;
+  position: relative;
+
+  font-size: 17px;
+  line-height: 24px;
+
+  background-color: fade(#92e5db, 40%);
+}
+.main-nav__logo {
+  display: block;
+  
+  padding-top: 21px;
+  padding-bottom: 21px;
+  background-color: fade(#92557b, 40%);  
+}
+.main-nav__logo-image {
+  display: block;
+
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  background-color: fade(#22551b, 40%);
+
+  &:hover {
+    fill: fade(#000000, 60%);
+  }
+  &:focus {
+    fill: fade(#000000, 60%);
+  }
+  &:active {
+    fill: fade(#000000, 30%);
+  }
+}
+.main-nav__toggle {
+  width: 33px;
+  height: 33px;
+
+  position: absolute;
+  top: 21px;
+  right: 25px;
+
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--to-close {
+    background-image: url("../../img/icon-menu-close3.svg");
+  }
+  
+  &--to-open {
+    background-image: url("../../img/icon-menu-open.svg");
+  }
+
+}
+.main-nav__wrapper {
+  background-color: fade(#22551b, 40%);
+
+  &--closed {
+    display: none;
+  }
+}
+.main-nav__item {
+}
+.main-nav__form {
+  margin: 0;
+}
+.main-nav__cart {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.main-nav__cart-icon {
+  margin-right: 20px;
+}
+

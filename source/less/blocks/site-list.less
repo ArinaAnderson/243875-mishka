@@ -1,0 +1,35 @@
+.site-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  background-color: fade(#ff9dd0, 40%);
+}
+.site-list__item {
+  padding: 30px 30px 30px 75px;
+
+  background-color: fade(#227710, 40%);
+}
+.site-list__link {
+  color: #000000;
+  text-decoration: none;
+  &:hover {
+    color: fade(#000000, 60%);
+  }
+  &:focus {
+    color: fade(#000000, 60%);
+  }
+  &:active {
+    color: fade(#000000, 30%);
+  }
+
+  &--active:hover {
+    color: #000000;
+  }
+  &--active:focus {
+    color: #000000;
+  }
+  &--active:active {
+    color: #000000;
+  }
+}
