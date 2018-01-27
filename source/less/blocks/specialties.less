@@ -22,15 +22,15 @@
   }
 
   &--light-green {
-    background-color: #63d1bb;
+    background-color: @light-green;
   }
 
   &--dark-green {
-    background-color: #56c3b2;
+    background-color: @dark-green;
   }
 
   &--light-green:hover {
-    background-color: #59d5bc;
+    background-color: saturate(lighten(@light-green, 2%), 5%);
   }
 
   &--light-green:focus {
