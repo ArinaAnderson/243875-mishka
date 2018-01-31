@@ -2,17 +2,56 @@
   margin: 0;
   padding-top: 30px;
   padding-bottom: 42px;
+  .side-offset(30px);
+
   background-color: fade(#ff9dd0, 40%);
 }
 
+@media(min-width: 770px) {
+  .week-item {
+    .side-offset(50px);
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+}
+
+@media(min-width: 1150px) {
+  .week-item {
+    width: 1050px;
+    padding-top: 120px;
+  }
+}
+
+.week-item__title-wrapper {
+  position: relative;
+  z-index: 5;
+
+  background-color: rgba(34, 170, 50, 0.5);
+}
+
+@media(min-width: 770px) {
+  .week-item__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media(min-width: 1150px) {
+  .week-item__title-wrapper {
+    justify-content: flex-start;
+  }
+}
+
 .week-item__title {
-  margin: 0 0 7px 0;
+  margin: 0;
   padding: 0;
 
   background-color: fade(#228811, 30%);
 }
 
 .week-item__status {
+  display: block;
   margin: 0;
   padding: 0;
 
@@ -20,10 +59,69 @@
   line-height: 20px;
   color: @light-green;
   text-transform: uppercase;
+
+  background-color: fade(#aa11ff, 30%); 
+}
+
+@media(min-width: 770px) {
+  .week-item__status {
+    width: 70px;
+    padding: 0 27px;
+
+    line-height: 18px;
+    text-align: center;
+  }
+}
+
+@media(min-width: 1150px) {
+  .week-item__status {
+    width: 170px;
+    box-sizing: border-box;
+    order: -1;
+  }
+}
+
+.week-item__wrapper {
+  margin-top: 25px;
+  position: relative;
+  background-color:  rgba(48, 144, 145, 0.7);
+}
+
+@media(min-width: 770px) {
+  .week-item__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+@media(min-width: 1150px) {
+  .week-item__wrapper {
+    margin-left: 170px;
+    margin-top: -110px;
+  }
+}
+
+.week-item__text {
+  background-color: fade(#ffbb22, 30%);
+}
+
+@media(min-width: 770px) {
+  .week-item__text {
+    width: 335px;
+    box-sizing: border-box;
+  }
+}
+
+@media(min-width: 1150px) {
+  .week-item__text {
+    margin-top: 162px;  
+  }
 }
 
 .week-item__description {
-  margin: 25px 0 0 0;
+  margin: 0;
   padding: 0;
 
   font-weight: normal;
@@ -33,6 +131,40 @@
 
 .week-item__info {
   margin: 15px 0 27px 0;
+}
+
+.week-item__image {
+  width: 260px;
+  background-color: green;
+}
+
+@media(min-width: 770px) {
+  .week-item__image {
+    width: 335px;
+  }
+}
+
+@media(min-width: 1150px) {
+  .week-item__image {
+    width: 525px;
+  }
+}
+
+.week-item__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.week-item__buy {
+  background-color:  rgba(148, 144, 45, 0.5);
+}
+
+@media(min-width: 770px) {
+  .week-item__buy {
+    width: 291px;
+    margin-top: -120px;
+  }
 }
 
 .week-item__price {

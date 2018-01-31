@@ -1,10 +1,17 @@
 .to-customize-form {
   margin: 0;
-  padding: 0 0 55px 0;
+  padding: 0 30px 55px 30px;
   background-color: fade(#ffa3a1, 30%);
 }
 
+@media(min-width: 770px) {
+  .to-customize-form {
+    .side-offset(50px);
+  }
+}
+
 .to-customize-form__section {
+  position: relative;
   margin: 0 0 30px 0;
   padding: 0;
 
@@ -13,11 +20,37 @@
   background-color: fade(#d9c7a4, 30%);
 }
 
+@media(min-width: 770px) {
+  .to-customize-form__section {
+    padding-left: 170px;
+    border-top: none;
+  }
+}
+
 .to-customize-form__section-name {
   width: 63px;
+
+  padding: 0;
+
   font-size: @light-green;
   color: #63d1bb;
   text-transform: uppercase;
+}
+
+@media(min-width: 770px) {
+  .to-customize-form__section-name {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media(min-width: 1150px) {
+  .to-customize-form__section-name {
+    position: absolute;
+    top: 0;
+    left: 60px;
+  }
 }
 
 .to-customize-form__label {
@@ -27,4 +60,25 @@
 
 .to-customize-form__button {
   width: 100%;
+}
+
+@media(min-width: 770px) {
+  .to-customize-form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media(min-width: 1150px) {
+  .to-customize-form__wrapper {
+    padding-left: 170px;
+  }
+}
+
+@media(min-width: 770px) {
+  .to-customize-form__button {
+    width: 260px;
+    order: -1;
+  }
 }
