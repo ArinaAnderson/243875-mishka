@@ -1,11 +1,13 @@
 .main-nav {
+  width: 320px;
+
   padding: 0;
   position: relative;
 
   font-size: 17px;
   line-height: 24px;
 
-  background-color: fade(#92e5db, 40%);
+  background-color: #ffffff;
 }
 
 @media (min-width: 770px) {
@@ -14,16 +16,15 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    width: 670px;
-    .side-offset(50px);
+    width: 770px;
 
-    .border-top(1px; red);
+    border-top: none;
   }
 }
 
 @media (min-width: 1150px) {
   .main-nav {
-    width: 1050px;
+    width: 1150px;
   }
 }
 
@@ -43,6 +44,8 @@
   .main-nav__logo {
     border-top: none;
     .side-offset(0);
+    margin-left: 50px;
+    margin-right: 50px;
   }
 }
 
@@ -105,7 +108,10 @@
     order: 1;
 
     margin-top: 0;
-    z-index: 2;
+    padding-left: 50px;
+
+    background-color: #fafafa;
+    .border-top(1px; red);
   }
 }
 
@@ -113,11 +119,13 @@
   .main-nav__list {
     order: -1;
     margin-top: 0;
+
+    background-color: #ffffff;
+    border-top: none;
   }
 }
 
 .main-nav__wrapper {
-  background-color: fade(#22551b, 40%);
 
   &--closed {
     display: none;
@@ -127,6 +135,9 @@
 @media (min-width: 770px) {
   .main-nav__wrapper {
     display: flex;
+
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 
@@ -164,3 +175,69 @@
 .main-nav__cart-icon {
   margin-right: 20px;
 }
+
+.main-nav__promo-wrapper {
+  display: none;
+  margin: 0;
+  padding: 15px 0;
+
+  font-size: 15px;
+  line-height: 24px;
+
+  .border-top(1px; red);
+
+  background: #fafafa;
+}
+
+@media (min-width: 770px) {
+  .main-nav__promo-wrapper {
+    display: flex;
+    order: 2;
+    flex-grow: 1;
+
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .main-nav__promo-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__promo-list {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 1150px) {
+  .main-nav__promo-list {
+    display: flex;
+  }
+}
+
+.main-nav__promo-item {
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__promo-text {
+  display: none;
+  margin: 0;
+  padding: 0;
+
+  font-weight: normal;
+}
+
+@media (min-width: 770px) {
+  .main-nav__promo-text {
+    display: flex;
+    margin-left: auto;
+  }
+}
+
+
