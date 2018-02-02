@@ -1,11 +1,22 @@
 .specialties {
   list-style: none;
-  margin-left: 0;
   padding: 0;
+}
+
+@media (min-width: 770px) {
+  .specialties {
+    display: flex;
+  }
 }
 
 .specialties__item {
   padding: 0;
+}
+
+@media (min-width: 770px) {
+  .specialties__item {
+    flex-grow: 1;
+  }
 }
 
 .specialties__link {
@@ -30,7 +41,7 @@
   }
 
   &--light-green:hover {
-    background-color: saturate(lighten(@light-green, 2%), 5%);
+    background-color: #59d5bc;
   }
 
   &--light-green:focus {

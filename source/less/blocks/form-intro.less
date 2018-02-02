@@ -1,6 +1,7 @@
 .form-intro {
   margin: 25px 0;
   padding: 0;
+  .side-offset(30px);
 
   font-weight: normal;
   font-size: 13px;
@@ -8,4 +9,14 @@
   color: #444444;
 
   background-color: fade(#ff3381, 30%);
+}
+
+@media (min-width: 770px) {
+  .form-intro {
+    width: 670px;
+    .side-offset(50px);
+
+    font-size: 17px;
+    line-height: 30px;
+  }
 }

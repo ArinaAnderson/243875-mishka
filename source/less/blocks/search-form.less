@@ -1,9 +1,5 @@
 .search-form {
-  padding-top: 28px;
-  padding-bottom: 28px;
   position: relative;
-
-  .border-top(1px; @gray);
 
   background-color: fade(#227710, 40%);
 }
@@ -57,8 +53,6 @@
   font-size: 14px;
 
   border: none;
-
-  opacity: 0.2;
 }
 
 .search-form__label {
@@ -67,4 +61,10 @@
   margin-left: 17px;
 
   vertical-align: middle;
+}
+
+@media (min-width: 770px) {
+  .search-form__label {
+    .visually-hidden();
+  }
 }

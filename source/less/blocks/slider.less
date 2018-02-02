@@ -1,12 +1,18 @@
 .slider__button {
   display: inline-block;
-  width: 50%;
+  width: 130px;
   height: 50px;
   box-sizing: border-box;
-  border: 1px solid #ececec;
+  border: 1px solid red;
 
   &--prev {
     margin-right: -5px;
     border-right: none;
+  }
+}
+
+@media (min-width: 770px) {
+  .slider__button {
+    width: 88px;
   }
 }

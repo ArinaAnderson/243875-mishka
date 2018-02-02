@@ -1,10 +1,40 @@
-.copyright__text {
-  margin: 0;
-  padding: 20px 0 22px 0;
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 183px;
+  padding: 23px 0;
 
   font-size: 19px;
   line-height: 19px;
-  text-align: center;
 
-  .border-top(1px; darken(@gray, 3%));
+  background-color: green;
+}
+
+@media (min-width: 770px) {
+  .copyright {
+    padding: 0;
+
+    border: none;
+  }
+}
+
+.copyrignt__text {
+  display: block;
+  padding: 8px 0 8px 0;
+
+  background-color: lightblue;
+}
+
+.copyright__link {
+  display: block;
+
+  background-color: red;
+}
+
+.copyright__icon {
+  width: 28px;
+  height: 34px;
+
+  fill: @light-green;
 }

@@ -1,4 +1,4 @@
-.site-list {
+.user-list {
   list-style: none;
   padding: 0;
 
@@ -7,9 +7,8 @@
 }
 
 @media (min-width: 770px) {
-  .site-list {
+  .user-list {
     display: flex;
-    order: 1;
     padding-left: 50px;
 
     font-size: 15px;
@@ -25,8 +24,7 @@
 }
 
 @media (min-width: 1150px) {
-  .site-list {
-    order: -1;
+  .user-list {
     margin-top: 0;
 
     font-size: 17px;
@@ -35,12 +33,12 @@
   }
 }
 
-.site-list--closed {
+.user-list--closed {
   display: none;
 }
 
-.site-list__item {
-  padding: 30px 30px 30px 75px;
+.user-list__item {
+  padding: 30px 30px;
 
   .border-top(1px; @gray);
 
@@ -48,33 +46,31 @@
 }
 
 @media (min-width: 770px) {
-  .site-list__item {
-    padding: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: 35px;
+  .user-list__item {
+    padding-top: 35px;
+    padding-bottom: 35px;
 
     border-top: none;
   }
 }
 
 @media (min-width: 1150px) {
-  .site-list__item {
+  .user-list__item {
     padding: 30px 35px;
 
     .border-right(1px; @gray);
   }
 
-  .site-list__item:first-child {
+  .user-list__item:first-child {
     padding-left: 0;
   }
 
-  .site-list__item:last-child {
+  .user-list__item:last-child {
     border-right: none;
   }
 }
 
-.site-list__link {
+.user-list__link {
   color: #000000;
   text-decoration: none;
 
@@ -100,5 +96,15 @@
 
   &--active:active {
     color: #000000;
+  }
+}
+
+.user-list svg {
+  margin-right: 20px;
+}
+
+@media (min-width: 770px) {
+  .user-list svg {
+    margin-right: 0;
   }
 }

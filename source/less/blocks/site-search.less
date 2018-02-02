@@ -1,4 +1,4 @@
-.site-cart {
+.site-search {
   display: block;
 
   color: #000000;
@@ -31,11 +31,17 @@
   background-color: fade(#92258b, 40%);
 }
 
-.site-cart__icon {
+.site-search__icon {
   width: 21px;
-  height: 18px;
+  height: 20px;
 }
 
-.site-cart__icon path {
+.site-search__icon path {
   fill: #d3d2d2;
+}
+
+@media (min-width: 770px) {
+  .site-search__text {
+    .visually-hidden();
+  }
 }
