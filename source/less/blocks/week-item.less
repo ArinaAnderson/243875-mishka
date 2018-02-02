@@ -17,8 +17,11 @@
 
 @media (min-width: 1150px) {
   .week-item {
-    width: 1050px;
-    padding-top: 120px;
+    position: relative;
+
+    /*width: 1050px;*/
+    padding-top: 70px;
+    box-sizing: border-box;
   }
 }
 
@@ -33,13 +36,14 @@
   .week-item__title-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
 @media (min-width: 1150px) {
   .week-item__title-wrapper {
     justify-content: flex-start;
+    margin-top: 50px;
   }
 }
 
@@ -48,6 +52,12 @@
   padding: 0;
 
   background-color: fade(#228811, 30%);
+}
+
+@media (min-width: 770px) {
+  .week-item__title {
+    width: 530px;
+  }
 }
 
 .week-item__status {
@@ -66,7 +76,9 @@
 @media (min-width: 770px) {
   .week-item__status {
     width: 70px;
+    /*margin-top: 50px;*/
     padding: 0 27px;
+    padding-top: 12px;
 
     line-height: 18px;
     text-align: center;
@@ -83,41 +95,37 @@
 
 .week-item__wrapper {
   margin-top: 25px;
-  position: relative;
   background-color: rgba(48, 144, 145, 0.7);
 }
 
 @media (min-width: 770px) {
   .week-item__wrapper {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
 
     padding-right: 335px;
-    min-height: 403px;
+    min-height: 403px;/*временно*/
   }
 }
 
 @media (min-width: 1150px) {
   .week-item__wrapper {
-    margin-left: 170px;
+    position: static;
+
     margin-top: 50px;
     padding-right: 525px;
+    padding-left: 170px;
 
-    min-height: 475px;
+    min-height: 480px;/*временно*/
   }
 }
 
 .week-item__text {
   background-color: fade(#ffbb22, 30%);
-}
-
-@media (min-width: 770px) {
-  .week-item__text {
-    width: 335px;
-    box-sizing: border-box;
-  }
 }
 
 .week-item__description {
@@ -127,6 +135,12 @@
   font-weight: normal;
   font-size: 15px;
   line-height: 24px;
+}
+
+@media (min-width: 770px) {
+  .week-item__description {
+    width: 290px;
+  }
 }
 
 .week-item__info {
@@ -159,7 +173,8 @@
     width: 525px;
     height: 635px;
 
-    top: -160px;
+    top: 70px;
+    right: 50px;
   }
 }
 
@@ -183,7 +198,6 @@
 @media (min-width: 770px) {
   .week-item__buy {
     width: 291px;
-    margin-top: 50px;
   }
 }
 

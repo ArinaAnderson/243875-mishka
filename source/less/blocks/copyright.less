@@ -1,28 +1,40 @@
 .copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 183px;
+  padding: 23px 0;
 
-  padding: 0;
+  font-size: 19px;
+  line-height: 19px;
 
   background-color: green;
 }
 
-.copyright__text {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0;
+@media (min-width: 770px) {
+  .copyright {
+    padding: 0;
+
+    border: none;
+  }
+}
+
+.copyrignt__text {
+  display: block;
   padding: 8px 0 8px 0;
 
-  font-size: 19px;
-  line-height: 19px;
-  text-align: center;
-  background-color: fade(#aaff33, 30%);
+  background-color: lightblue;
 }
 
 .copyright__link {
   display: block;
+
+  background-color: red;
 }
 
 .copyright__icon {
+  width: 28px;
+  height: 34px;
+
   fill: @light-green;
 }
