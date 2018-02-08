@@ -1,17 +1,131 @@
 .color-picker {
-  background-color: fade(#ff3381, 30%);
+  padding: 25px 0 10px 0;
+}
+
+@media (min-width: 770px) {
+  .color-picker {
+    padding: 63px 50px 12px 220px;
+
+    background-color: #f1f1f1;
+    border-top: 1px solid transparent;
+  }
+}
+
+@media (min-width: 1150px) {
+  .color-picker {
+    padding: 63px 50px 12px 225px;
+  }
+}
+
+.color-picker__name {
+  left: 0;
+}
+
+@media (min-width: 770px) {
+  .color-picker__name {
+    top: 63px;
+    left: 50px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .color-picker__name {
+    left: 111px;
+  }
 }
 
 .color-picker__group {
-  width: 250px;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  background-color: fade(#22ff81, 30%);
+@media (min-width: 770px) {
+  .color-picker__group {
+    width: 240px;
+    margin-bottom: 22px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .color-picker__group {
+    width: 262px;
+  }
 }
 
 @media (min-width: 770px) {
   .color-picker__wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
+
+@media (min-width: 1150px) {
+  .color-picker__wrapper {
+    justify-content: flex-start;
+  }
+}
+
+.color-picker__label {
+  position: relative;
+
+  display: block;
+  padding-top: 9px;
+  padding-bottom: 34px;
+  padding-left: 62px;
+}
+
+.color-picker__label::before {
+  content: "";
+
+  position: absolute;
+  top: -15px;
+  left: 0;
+
+  width: 36px;
+  height: 36px;
+
+  border: 2px solid #444444;
+}
+
+@media (min-width: 770px) {
+  .color-picker__label {
+    padding-top: 0;
+    padding-bottom: ;
+    padding-left: 80px;
+  }
+
+  .color-picker__label::before {
+    top: -17px;
+    left: -2px;
+
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.color-picker__label:hover .color-picker__label::before,
+.color-picker__label:focus .color-picker__label::before {
+  border-color: @light-green;
+}
+
+.color-picker__input:checked + .color-picker__label::before {
+  background-image: url("../../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75%;
+}
+
+.color-picker__input + .color-picker__label:hover::before {
+  border-color: 0 0 0 2px @light-green;
+}
+
+.color-picker__input:hover + .color-picker__label::before,
+.color-picker__input:focus + .color-picker__label::before {
+  border-color: @light-green;
+ }
+
+.color-picker__input:active + .color-picker__label::before {
+  border-color: #c7c7c7;
+ }
+

@@ -1,0 +1,145 @@
+.email-input {
+  padding: 10px 0 12px 0;
+}
+
+@media (min-width: 770px) {
+  .email-input {
+    padding: 19px 50px 49px 220px;
+
+    background-color: #f1f1f1;
+    border-top: 1px solid transparent;
+  }
+}
+
+@media (min-width: 1150px) {
+  .email-input {
+    padding: 19px 225px 49px 225px;
+  }
+}
+
+.email-input__name {
+  left: 0;
+
+  padding-right: 20px;
+}
+
+@media (min-width: 770px) {
+  .email-input__name {
+    top: 28px;
+    left: 50px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .email-input__name {
+    top: 30px;
+    left: 111px;
+  }
+}
+
+.email-input__group {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 770px) {
+  .email-input__group {
+    margin-bottom: 0;
+  }
+}
+
+.email-input__label {
+  display: block;
+}
+
+.email-input__input {
+  display: inline-block;
+  width: 86.1538%;
+  min-height: 0;
+  min-width: 0;
+  
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 18px;
+  box-sizing: border-box;
+
+  font-size: 17px;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: bottom;
+
+  border: none;
+  border-bottom: 2px solid #000000; 
+}
+
+.email-input__input svg {
+  width: 32px;
+  height: auto;
+}
+
+.email-input__label {
+  display: inline-block;
+  width: 14.23076923%;
+  min-height: 0;
+  min-width: 0;
+ 
+  padding-top: 4px;
+  padding-bottom: 0px;
+  box-sizing: border-box;
+
+  text-align: left;
+
+  border-bottom: 2px solid #000000;
+  background-color: #ffffff;
+}
+
+@media (min-width: 770px) {
+  .email-input__input {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 9px;
+    padding-left: 15px;
+
+    background-color: #f1f1f1;
+  }
+
+  .email-input__label {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 9px;
+    padding-left: 14px;
+
+    background-color: #f1f1f1;
+  }
+}
+
+@media (min-width: 1150px) {
+  .email-input__label {
+    padding-top: 3px;
+    padding-right: 4px;
+    text-align: right;
+  }
+}
+
+.email-input__label path {
+  fill: #cccccc;
+}
+
+.email-input__input:hover,
+.email-input__input:focus,
+.email-input__input:active {
+  border-color: @light-green;
+}
+
+.email-input__input:active + .email-input__label,
+.email-input__input:hover + .email-input__label,
+.email-input__input:focus + .email-input__label {
+  border-color: @light-green;
+}
+
+.email-input__input:active + .email-input__label path,
+.email-input__input:hover + .email-input__label path,
+.email-input__input:focus + .email-input__label path{
+  fill: @light-green;
+}

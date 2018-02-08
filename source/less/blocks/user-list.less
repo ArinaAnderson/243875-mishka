@@ -9,26 +9,16 @@
 @media (min-width: 770px) {
   .user-list {
     display: flex;
-    padding-left: 50px;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 20px;
 
-    font-size: 15px;
-
-    &--lightgray {
-      background-color: #fcfcfc;
-    }
-
-    &--darkgray {
-      background-color: #f1f1f1;
-    }
+    font-size: 17px;
   }
 }
 
 @media (min-width: 1150px) {
   .user-list {
-    margin-top: 0;
-
-    font-size: 17px;
-
     background-color: #ffffff;
   }
 }
@@ -38,42 +28,26 @@
 }
 
 .user-list__item {
-  padding: 30px 30px;
+  padding: 20px 30px;
 
   .border-top(1px; @gray);
-
-  background-color: fade(#227710, 40%);
 }
 
 @media (min-width: 770px) {
   .user-list__item {
-    padding-top: 35px;
+    padding-top: 30px;
     padding-bottom: 35px;
-
     border-top: none;
-  }
-}
-
-@media (min-width: 1150px) {
-  .user-list__item {
-    padding: 30px 35px;
-
-    .border-right(1px; @gray);
-  }
-
-  .user-list__item:first-child {
-    padding-left: 0;
-  }
-
-  .user-list__item:last-child {
-    border-right: none;
+    .border-left(1px; @gray)
   }
 }
 
 .user-list__link {
   color: #000000;
   text-decoration: none;
+}
 
+.user-list__link[href] {
   &:hover {
     color: fade(#000000, 60%);
   }
@@ -85,26 +59,20 @@
   &:active {
     color: fade(#000000, 30%);
   }
-
-  &--active:hover {
-    color: #000000;
-  }
-
-  &--active:focus {
-    color: #000000;
-  }
-
-  &--active:active {
-    color: #000000;
-  }
 }
 
-.user-list svg {
+.user-list__icon {
+  display: inline-block;
+  width: 21px;
+  height: 18px;
   margin-right: 20px;
+  box-sizing: border-box;
+
+  vertical-align: bottom;
 }
 
 @media (min-width: 770px) {
-  .user-list svg {
-    margin-right: 0;
+  .user-list__icon {
+    margin-right: 25px;
   }
 }

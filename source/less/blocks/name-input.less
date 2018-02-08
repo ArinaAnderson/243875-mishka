@@ -1,0 +1,91 @@
+.name-input {
+  padding: 27px 0 12px 0;
+}
+
+@media (min-width: 770px) {
+  .name-input {
+    padding: 65px 50px 17px 220px;
+
+    border-top: 1px solid transparent;
+  }
+}
+
+@media (min-width: 1150px) {
+  .name-input {
+    padding: 63px 225px 12px 225px;
+  }
+}
+
+@media (min-width: 770px) {
+  .name-input__group {
+    display: flex;
+    margin-bottom: 17px;
+  }
+}
+
+.name-input__name {
+  left: 0;
+}
+
+@media (min-width: 770px) {
+  .name-input__name {
+    top: 65px;
+    left: 50px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .name-input__name {
+    left: 111px;
+  }
+}
+
+.name-input__label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 770px) {
+  .name-input__label {
+    margin-right: 22px;
+
+    font-size: 19px;
+    line-height: 19px;
+  }
+}
+
+.name-input__input {
+  display: block;
+  width: 100%;
+  min-height: 0;
+  min-width: 0;
+  margin-bottom: 20px;
+  padding-top: 8px;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+
+  font-size: 17px;
+  line-height: 18px;
+  text-align: bottom;
+
+  border: none;
+  border-bottom: 2px solid #000000; 
+}
+
+@media (min-width: 770px) {
+  .name-input__input {
+    flex-grow: 1;
+    padding-top: 0;
+    padding-left: 20px;
+    padding-bottom: 13px;
+
+    font-size: 19px;
+    line-height: 19px;
+  }
+}
+
+.name-input__input:hover,
+.name-input__input:focus,
+.name-input__input:active {
+  border-color: @light-green;
+}

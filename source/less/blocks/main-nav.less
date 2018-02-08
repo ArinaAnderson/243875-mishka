@@ -3,24 +3,20 @@
 
   width: 320px;
   padding: 0;
-  padding-top: 21px;
 
   font-size: 17px;
   line-height: 24px;
 
-  background-color: #ffffff;
+  .border-top(1px; @gray);
 }
 
 @media (min-width: 770px) {
   .main-nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: stretch;
     flex-wrap: wrap;
-
     width: 770px;
-    padding-top: 0;
-    padding-bottom: 0;
 
     border-top: none;
   }
@@ -28,6 +24,7 @@
 
 @media (min-width: 1150px) {
   .main-nav {
+    align-items: center;
     width: 1150px;
   }
 }
@@ -35,13 +32,10 @@
 .main-nav__logo {
   display: block;
   width: 87px;
-  height: 37px;
+  height: 36px;
   margin: 0 auto;
+  margin-top: 21px;
   margin-bottom: 21px;
-
-  .border-top(1px; @gray);
-
-  background-color: fade(#92557b, 40%);
 }
 
 @media (min-width: 770px) {
@@ -49,19 +43,24 @@
     width: 114px;
     height: 47px;
     margin-left: 50px;
-    margin-right: 50px;
-    .side-offset(0);
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .main-nav__logo {
+    width: 149px;
+    height: 72px;
+    margin: 9px 20px 6px 20px;
+    margin-left: 20px;
   }
 }
 
 .main-nav__logo-image {
   display: block;
-
   width: 87px;
-  height: 37px;
-  margin: 0 auto;
+  height: 36px;
   padding: 0;
-  background-color: fade(#22551b, 40%);
 
   &:hover {
     fill: fade(#000000, 60%);
@@ -84,24 +83,63 @@
 }
 
 .main-nav__toggle {
-  width: 33px;
-  height: 33px;
+  position: absolute;
+  top: 25px;
+  right: 27px;
+  z-index: 2;
+
+  width: 27px;
+  height: 26px;
+
+  background-color: #ffffff;
+  border: none;
+
+  cursor: pointer;
+}
+
+.main-nav__toggle--to-open::before {
+  content: "";
 
   position: absolute;
-  top: 21px;
-  right: 25px;
+  top: 6px;
+  left: 3px;
 
-  border: none;
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 20px;
+  height: 2px;
 
-  &--to-close {
-    background-image: url("../../img/icon-menu-close3.svg");
-  }
+  box-shadow: 0 6px 0 0 #221f1f, 0 12px 0 0 #221f1f;
+}
 
-  &--to-open {
-    background-image: url("../../img/icon-menu-open.svg");
-  }
+.main-nav__toggle--to-open:active::before {
+  background-color: @light-green;
+  box-shadow: 0 6px 0 0 @light-green, 0 12px 0 0 @light-green;
+}
+
+.main-nav__toggle--to-close::before,
+.main-nav__toggle--to-close::after {
+  content: "";
+
+  position: absolute;
+  top: 12px;
+  left: 0;
+
+  width: 27px;
+  height: 2px;
+
+  background-color: #221f1f;  
+}
+
+.main-nav__toggle--to-close::before {
+  transform: rotate(45grad);
+}
+
+.main-nav__toggle--to-close::after {
+  transform: rotate(-45grad);
+}
+
+.main-nav__toggle--to-close:active::before,
+.main-nav__toggle--to-close:active::after {
+  background-color: @light-green;
 }
 
 @media (min-width: 770px) {
@@ -117,8 +155,6 @@
 @media (min-width: 770px) {
   .main-nav__list {
     margin-top: 0;
-
-    .border-top(1px; red);
   }
 }
 
@@ -181,17 +217,15 @@
 .main-nav__promo-wrapper {
   display: none;
   margin: 0;
-  padding: 15px 0;
+  padding: 0;
 
   font-size: 15px;
   line-height: 24px;
 
   .border-top(1px; red);
 
-  background: #fafafa;
-
   &--lightgray {
-    background-color: #fcfcfc;
+    background-color: #f9f9f9;
   }
 
   &--darkgray {
@@ -204,9 +238,6 @@
     display: flex;
     order: 2;
     flex-grow: 1;
-
-    padding-left: 50px;
-    padding-right: 50px;
   }
 }
 
@@ -227,25 +258,38 @@
 @media (min-width: 1150px) {
   .main-nav__promo-list {
     display: flex;
+    flex-wrap: wrap;
+    max-width: 700px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
   }
 }
 
 .main-nav__promo-item {
   margin: 0;
-  padding: 0;
+  padding: 15px 30px;
 }
 
 .main-nav__promo-text {
   display: none;
   margin: 0;
-  padding: 0;
+  padding: 15px 50px 15px 15px;
 
-  font-weight: normal;
+  font-weight: 400;
+  text-align: right;
 }
 
 @media (min-width: 770px) {
   .main-nav__promo-text {
     display: flex;
+    max-width: 310px;
     margin-left: auto;
+  }
+}
+
+@media (min-width: 1150px) {
+  .main-nav__promo-text {
+    max-width: 440px;
   }
 }

@@ -1,5 +1,6 @@
 .form-intro {
-  margin: 25px 0;
+  margin: 0;
+  margin-top: 22px;
   padding: 0;
   .side-offset(30px);
 
@@ -7,14 +8,24 @@
   font-size: 13px;
   line-height: 24px;
   color: #444444;
-
-  background-color: fade(#ff3381, 30%);
 }
 
 @media (min-width: 770px) {
   .form-intro {
     width: 670px;
+    margin-top: 67px;
     .side-offset(50px);
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .form-intro {
+    width: 700px;
+    margin-top: 115px;
+    .side-offset(225px);
 
     font-size: 17px;
     line-height: 30px;

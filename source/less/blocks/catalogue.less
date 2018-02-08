@@ -1,13 +1,13 @@
 .catalogue {
-  margin: 30px 0 30px 0;
+  margin: 0;
+  margin-top: 30px;
   .side-offset(30px);
-
-  background-color: fade(#e37fb8, 30%);
 }
 
 @media (min-width: 770px) {
   .catalogue {
-    .side-offset(50px)
+    margin-top: 75px;
+    .side-offset(50px);
   }
 }
 
@@ -15,12 +15,28 @@
   .catalogue {
     display: flex;
     justify-content: space-between;
+    margin-top: 124px;
   }
 }
 
 .catalogue__piece {
   margin: 0;
-  margin-top: 30px;
+  margin-bottom: 31px;
+}
 
-  background-color: fade(#137fb8, 30%);
+.catalogue__piece:last-child {
+  margin-bottom: 0;
+}
+
+
+@media (min-width: 770px) {
+  .catalogue__piece {
+    margin-bottom: 58px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .catalogue__piece {
+    margin-bottom: 0;
+  }
 }

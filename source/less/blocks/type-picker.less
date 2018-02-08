@@ -1,0 +1,107 @@
+.type-picker {
+  padding: 25px 0 28px 0;
+}
+
+@media (min-width: 770px) {
+  .type-picker {
+    padding: 53px 50px 12px 220px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .type-picker {
+    padding: 53px 50px 12px 225px;
+  }
+}
+
+.type-picker__name {
+  left: 0;
+}
+
+@media (min-width: 770px) {
+  .type-picker__name {
+    top: 53px;
+    left: 50px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .type-picker__name {
+    top: 53px;
+    left: 114px;
+  }
+}
+
+.type-picker__group {
+  padding: 0;
+}
+
+.type-picker__label {
+  position: relative;
+
+  display: block;
+  padding-top: 7px;
+  padding-bottom: 17px;
+  padding-left: 62px;
+}
+
+.type-picker__label::before {
+  content: "";
+
+  position: absolute;
+  top: 2px;
+  left: 2px;
+
+  width: 16px;
+  height: 16px;
+
+  background-color: #ffffff;
+  border: 10px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #444444;
+}
+
+@media (min-width: 770px) {
+  .type-picker__label {
+    padding-top: 0;
+    padding-bottom: 57px;
+    padding-left: 80px;
+  }
+
+  .type-picker__label::before {
+    top: -14px;
+    left: -2px;
+
+    width: 21px;
+    height: 21px;
+
+    border-width: 13px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .type-picker__label::before {
+    left: 0;
+  }
+}
+
+.type-picker__label:hover .type-picker__label::before,
+.type-picker__label:focus .type-picker__label::before {
+  border-color: @light-green;
+}
+
+.type-picker__input:checked + .type-picker__label::before {
+  background-color: @light-green;
+}
+
+.type-picker__input + .type-picker__label:hover::before {
+  box-shadow: 0 0 0 2px @light-green;
+}
+
+.type-picker__input:focus + .type-picker__label::before {
+  box-shadow: 0 0 0 2px @light-green;
+ }
+
+.type-picker__input:active + .type-picker__label::before {
+  box-shadow: 0 0 0 2px #c7c7c7;
+ }

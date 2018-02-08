@@ -43,7 +43,7 @@
   .page-footer__logo {
     display: block;
 
-    margin-right: 95px;
+    margin-right: 102px;
   }
 
   .logo-underline {
@@ -62,7 +62,12 @@
   padding: 0 59px;
 
   .border-bottom(1px; darken(@gray, 3%));
-  background-color: fade(#1133ff, 30%);
+}
+
+@media (min-width: 770px) {
+  .page-footer__social {
+    border: none;
+  }
 }
 
 .page-footer__copyright {
