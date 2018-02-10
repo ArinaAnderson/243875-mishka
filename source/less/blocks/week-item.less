@@ -1,20 +1,22 @@
 .week-item {
   margin: 0;
+  .centre(30px; @mobile);
   padding-top: 30px;
   padding-bottom: 42px;
-  .side-offset(30px);
+  box-sizing: border-box;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .week-item {
+    .centre(50px; @tablet);
     padding-top: 50px;
-    .side-offset(50px);
     padding-bottom: 70px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .week-item {
+    width: 1150px;
     position: relative;
 
     padding-top: 70px;
@@ -29,7 +31,7 @@
   margin-bottom: 30px;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .week-item__title-wrapper {
     display: flex;
     justify-content: space-between;
@@ -38,7 +40,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .week-item__title-wrapper {
     justify-content: flex-start;
     margin-top: 50px;
@@ -51,7 +53,7 @@
   padding: 0;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .week-item__title {
     width: 530px;
   }
@@ -68,7 +70,7 @@
   text-transform: uppercase;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .week-item__status {
     width: 70px;
     padding: 0 27px;
@@ -79,7 +81,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .week-item__status {
     width: 170px;
     box-sizing: border-box;
@@ -87,7 +89,7 @@
   }
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .week-item__wrapper {
     position: relative;
 
@@ -95,7 +97,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .week-item__wrapper {
     position: static;
 
@@ -108,13 +110,13 @@
   margin-bottom: 26px;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .week-item__text {
     margin-bottom: 52px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .week-item__text {
     margin-bottom: 117px;
   }
@@ -130,7 +132,7 @@
   line-height: 24px;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .week-item__description {
     width: 290px;
     margin-bottom: 40px;
@@ -140,7 +142,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .week-item__description {
     margin-bottom: 55px;
   }
@@ -154,7 +156,7 @@
   width: 260px;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .week-item__image {
     position: absolute;
     top: 0;
@@ -165,7 +167,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .week-item__image {
     width: 525px;
     height: 635px;
@@ -181,7 +183,7 @@
   height: auto;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .week-item__buy {
     width: 291px;
   }
@@ -194,7 +196,7 @@
   text-align: center;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .week-item__price {
     margin: 30px 0;
   }

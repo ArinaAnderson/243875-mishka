@@ -1,19 +1,19 @@
 .color-picker {
-  padding: 25px 0 10px 0;
+  padding: 28px 0 10px 0;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .color-picker {
-    padding: 63px 50px 12px 220px;
+    padding: 63px 50px 17px 220px;
 
     background-color: #f1f1f1;
     border-top: 1px solid transparent;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .color-picker {
-    padding: 63px 50px 12px 225px;
+    padding: 62px 50px 16px 225px;
   }
 }
 
@@ -21,46 +21,50 @@
   left: 0;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .color-picker__name {
     top: 63px;
     left: 50px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .color-picker__name {
+    top: 65px;
     left: 111px;
   }
 }
 
 .color-picker__group {
-  margin: 0;
-  padding: 0;
+  padding-top: 9px;
+  padding-bottom: 34px;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .color-picker__group {
     width: 240px;
     margin-bottom: 22px;
+    padding-top: 4px;
+    padding-bottom: 29px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .color-picker__group {
     width: 262px;
   }
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .color-picker__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 900px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .color-picker__wrapper {
     justify-content: flex-start;
   }
@@ -70,8 +74,6 @@
   position: relative;
 
   display: block;
-  padding-top: 9px;
-  padding-bottom: 34px;
   padding-left: 62px;
 }
 
@@ -88,7 +90,7 @@
   border: 2px solid #444444;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .color-picker__label {
     padding-top: 0;
     padding-left: 80px;

@@ -2,16 +2,16 @@
   padding: 7px 0 12px 0;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .comment-input {
-    padding: 49px 50px 49px 220px;
+    padding: 49px 50px 51px 220px;
 
     background-color: #ffffff;
     border-top: 1px solid transparent;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .comment-input {
     padding: 49px 225px 45px 225px;
   }
@@ -23,7 +23,7 @@
   margin-bottom: 20px;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .comment-input__name {
     top: 68px;
     left: 50px;
@@ -32,7 +32,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .comment-input__name {
     top: 62px;
     left: 111px;
@@ -58,4 +58,17 @@
   resize: none;
 
   border: 2px solid #000000;
+}
+
+@media (min-width: @tablet) {
+  .comment-input__field {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.comment-input__field:hover,
+.comment-input__field:focus,
+.comment-input__field:active {
+  border-color: @light-green;
 }

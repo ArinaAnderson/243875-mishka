@@ -1,8 +1,10 @@
 .modal-window {
   position: fixed;
-  bottom: 150px;
-  left: 0;
-  width: 100%;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
 
-  background-color: transparent;
+  &--closed {
+    display: none;
+  }
 }

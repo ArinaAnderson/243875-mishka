@@ -1,26 +1,34 @@
 .production-video {
   position: relative;
+
+  width: 260px;
   margin-top: 32px;
   margin-bottom: 56px;
+  margin-left: auto;
+  margin-right: auto;
   .side-offset(30px);
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .production-video {
     display: flex;
     flex-direction: column;
+    width: 670px;
     margin-top: 57px;
     margin-bottom: 70px;
     .side-offset(50px);
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .production-video {
     display: block;
+    width: 1150px;
+    min-height: 454px;
     margin-top: 60px;
     margin-bottom: 105px;
-    padding: 0 50px 0 730px;
+    padding: 0 50px 0 675px;
+    box-sizing: border-box;
   }
 }
 
@@ -48,7 +56,7 @@
   background-position: center;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .production-video__tittle {
     padding: 38px 40px 30px 106px;
   }
@@ -59,7 +67,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .production-video__tittle {
     padding: 95px 55px 15px 80px;
 
@@ -82,7 +90,7 @@
   background-color: fade(#ffca33, 30%);
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .production-video__container {
     width: 670px;
     height: 455px;
@@ -91,7 +99,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .production-video__container {
     width: 680px;
     height: 454px;
@@ -131,7 +139,7 @@
   border-right-width: 0;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .production-video__button {
     top: 190px;
     left: 284px;
@@ -154,13 +162,13 @@
   border-top: none;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .production-video__wrapper {
     padding: 0 41px 45px 41px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .production-video__wrapper {
     padding: 15px 55px 20px 80px;
     border: none;
@@ -176,7 +184,7 @@
   line-height: 24px;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .production-video__description {
     margin-bottom: 35px;
 
@@ -185,7 +193,7 @@
   }
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .production-video__description {
     margin-bottom: 48px;
   }

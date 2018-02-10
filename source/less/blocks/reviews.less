@@ -1,26 +1,29 @@
 .reviews {
   margin: 0;
+  .centre(30px; @mobile);
   padding-top: 25px;
   padding-bottom: 50px;
-  .side-offset(30px);
+  
+  box-sizing: border-box;
 
   border-bottom: 1px solid transparent;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .reviews {
+    .centre(50px; @tablet);
     position: relative;
     padding-top: 75px;
     padding-bottom: 135px;
-    .side-offset(50px);
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .reviews {
+    width: 1150px;
     padding-top: 70px;
     padding-bottom: 183px;
-    .side-offset(50px);
+    .side-offset(50px);background-color: fade(#aaff44, 30%);
   }
 }
 
@@ -29,14 +32,14 @@
   margin-bottom: 25px;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .reviews__title {
     margin-right: 205px;
     margin-bottom: 47px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .reviews__title {
     padding-left: 175px;
   }
@@ -47,7 +50,7 @@
   margin-bottom: 40px;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .reviews__list {
     position: relative;
 
@@ -55,7 +58,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .reviews__list {
     margin-left: 175px;
   }
@@ -69,7 +72,7 @@
   font-weight: 400;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .reviews__item {
     margin-bottom: 0;
   }
@@ -83,7 +86,7 @@
   line-height: 30px;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .reviews__content {
     margin-bottom: 55px;
     padding-right: 20px;
@@ -92,7 +95,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .reviews__content {
     margin-bottom: 38px;
     padding-right: 102px;
@@ -107,7 +110,7 @@
   font-style: normal;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .reviews__source {
     margin-right: 200px;
   }
@@ -121,14 +124,14 @@
   line-height: 24px;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .reviews__name {
     display: block;
     font-size: 18px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .reviews__name {
     font-size: 17px;
   }
@@ -145,7 +148,7 @@
   font-size: 17px;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .reviews__buttons {
     position: absolute;
     bottom: 0;
@@ -153,7 +156,7 @@
   }
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .reviews__send-review {
     width: 170px;
     position: absolute;
@@ -162,7 +165,7 @@
   }
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .reviews__send-review {
     width: 170px;
     position: absolute;
