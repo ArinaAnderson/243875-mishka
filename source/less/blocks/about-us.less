@@ -1,92 +1,87 @@
 .about-us {
   margin: 0;
+  .centre(30px; @mobile);
   padding-top: 30px;
   padding-bottom: 0;
-  .side-offset(30px);
-
-  background-color: fade(#ffad20, 40%);
+  box-sizing: border-box;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .about-us {
-    .side-offset(50px);
+    .centre(50px; @tablet);
+    padding-top: 50px;
+    padding-bottom: 24px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .about-us {
+    width: 1150px;
+    padding-top: 60px;
+    padding-bottom: 30px;
   }
 }
 
 .about-us__title {
   margin: 0;
-
-  background-color: fade(#ffad30, 40%);
+  margin-bottom: 30px;
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @tablet) {
   .about-us__title {
-    margin-left: 170px;
+    margin-bottom: 45px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .about-us__title {
+    padding-left: 175px;
   }
 }
 
 .about-us__list {
   list-style: none;
-
-  position: relative;
   margin: 0;
-  margin-top: 30px;
   padding: 0;
 
   font-size: 17px;
   line-height: 20px;
-
-  background-color: fade(#ff9dd0, 40%);
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .about-us__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 670px;
+
+    font-size: 20px;
+    line-height: 22px;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .about-us__list {
-    width: 690px;
+    width: 700px;
 
-    margin-left: 170px;
+    margin-left: 175px;
   }
 }
 
 .about-us__item {
   margin: 0;
-  padding: 55px 0 30px 0;
-
-  background-color: fade(#ff9dd0, 40%);
+  padding: 0;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .about-us__item {
-    width: 270px;
-
-    background-color: fade(#ffaad0, 40%);
+    width: 335px;
+    padding-right: 35px;
+    box-sizing: border-box;
   }
 }
 
-.about-us__item--ecology::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 8px;
-
-  width: 32px;
-  height: 37px;
-
-  background-color: transparent;
-  background-image: url("../../img/icon-feature-flower.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .about-us__item--ecology {
     order: -1;
   }
@@ -101,5 +96,45 @@
 
   .about-us__item--package {
     order: 2;
+  }
+}
+
+@media (min-width: @desktop) {
+  .about-us__item {
+    width: 350px;
+    padding-right: 50px;
+  }
+}
+
+.about-us__wrapper {
+  height: 37px;
+  box-sizing: border-box;
+}
+
+.about-us__wrapper path {
+  fill: @light-green;
+}
+
+.about-us__wrapper--popular {
+  padding-top: 5px;
+}
+
+.about-us__wrapper--handmade {
+  padding-top: 4px;
+}
+
+.about-us__wrapper--package {
+  padding-top: 2px;
+}
+
+.about-us__text {
+  margin: 0;
+  padding-top: 12px;
+  padding-bottom: 33px;
+}
+
+@media (min-width: @tablet) {
+  .about-us__text {
+    padding-bottom: 62px;
   }
 }

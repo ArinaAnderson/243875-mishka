@@ -1,0 +1,51 @@
+@media (min-width: @tablet) {
+  .size-picker {
+    .side-offset(78px);
+  }
+}
+
+.size-picker__label {
+  display: block;
+  width: 82px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  box-sizing: border-box;
+
+  font-size: 17px;
+  line-height: 17px;
+  text-align: center;
+
+  .border(2px; #ececec);
+}
+
+@media (min-width: @tablet) {
+  .size-picker__label {
+    width: 112px;
+  }
+}
+
+.size-picker__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.size-picker__input:hover + .size-picker__label,
+.size-picker__input:focus + .size-picker__label {
+  border-color: #c7c7c7;
+}
+
+.size-picker__input:active + .size-picker__label,
+.size-picker__input:checked + .size-picker__label {
+  border-color: @light-green;
+}
+
+.size-picker__button {
+  width: 100%;
+  padding-bottom: 15px;
+
+  color: #ffffff;
+
+  background-color: @light-green;
+  border: none;
+}

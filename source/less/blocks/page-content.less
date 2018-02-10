@@ -1,16 +1,21 @@
 .page-content {
-  width: 320px;
-  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .page-content {
-    width: 770px;
+    width: 100%;
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .page-content {
-    width: 1150px;
+    width: 100%;
   }
+}
+
+.page-content__unit {
+  width: 100%;
+  .border-bottom(5px; @gray);
 }

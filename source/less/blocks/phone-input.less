@@ -1,0 +1,126 @@
+.phone-input {
+  padding: 5px 0 10px 0;
+}
+
+@media (min-width: @tablet) {
+  .phone-input {
+    padding: 54px 50px 10px 220px;
+
+    background-color: #f1f1f1;
+    border-top: 1px solid transparent;
+  }
+}
+
+@media (min-width: @desktop) {
+  .phone-input {
+    padding: 57px 225px 10px 225px;
+  }
+}
+
+.phone-input__name {
+  left: 0;
+}
+
+@media (min-width: @tablet) {
+  .phone-input__name {
+    top: 63px;
+    left: 50px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .phone-input__name {
+    top: 67px;
+    left: 111px;
+  }
+}
+
+.phone-input__group {
+  display: flex;
+  width: 100%;
+}
+
+.phone-input__input {
+  display: inline-block;
+  width: 87.30769%;
+  min-height: 0;
+  min-width: 0;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 14px;
+  box-sizing: border-box;
+
+  font-size: 17px;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: bottom;
+
+  border: none;
+  border-bottom: 2px solid #000000;
+}
+
+.phone-input__label {
+  display: inline-block;
+  width: 12.6923%;
+  min-height: 0;
+  min-width: 0;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 16px;
+  box-sizing: border-box;
+
+  text-align: left;
+
+  border-bottom: 2px solid #000000;
+  background-color: #ffffff;
+}
+
+@media (min-width: @tablet) {
+  .phone-input__input {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 10px;
+    padding-left: 15px;
+
+    background-color: #f1f1f1;
+  }
+
+  .phone-input__label {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-left: 10px;
+
+    background-color: #f1f1f1;
+  }
+}
+
+@media (min-width: @desktop) {
+  .phone-input__label {
+    padding-top: 3px;
+    padding-right: 8px;
+    text-align: right;
+  }
+}
+
+.phone-input__label svg {
+  fill: #cccccc;
+}
+
+.phone-input__input:hover,
+.phone-input__input:focus,
+.phone-input__input:active {
+  border-color: @light-green;
+}
+
+.phone-input__input:active + .phone-input__label,
+.phone-input__input:hover + .phone-input__label,
+.phone-input__input:focus + .phone-input__label {
+  border-color: @light-green;
+}
+
+.phone-input__input:active + .phone-input__label path,
+.phone-input__input:hover + .phone-input__label path,
+.phone-input__input:focus + .phone-input__label path {
+  fill: @light-green;
+}

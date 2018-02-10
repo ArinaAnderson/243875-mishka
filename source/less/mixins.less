@@ -20,16 +20,30 @@
 
 .visually-hidden() {
   position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  height: 1px;
+
   width: 1px;
+  height: 1px;
   margin: -1px;
   padding: 0;
   border: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .side-offset(@padding) {
   padding-left: @padding;
   padding-right: @padding;
 }
+
+.centre(@padding; @width) {
+  width: @width;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: @padding;
+  padding-right: @padding;
+}
+

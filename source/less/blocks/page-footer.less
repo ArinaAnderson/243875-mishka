@@ -1,29 +1,26 @@
 .page-footer {
-  width: 260px;
-  margin: 0 auto;
+  width: 100%;
   padding-top: 0;
   padding-bottom: 0;
   .side-offset(30px);
+  box-sizing: border-box;
 
   background-color: #f1f1f1;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .page-footer {
     display: flex;
     align-items: center;
-
-    width: 670px;
-
     padding-top: 30px;
     padding-bottom: 30px;
     .side-offset(50px);
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .page-footer {
-    width: 1050px;
+    .side-offset(100px);
   }
 }
 
@@ -39,11 +36,11 @@
   outline: lightblue;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .page-footer__logo {
     display: block;
 
-    margin-right: 95px;
+    margin-right: 102px;
   }
 
   .logo-underline {
@@ -51,25 +48,30 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop) {
   .page-footer__logo {
-    margin-right: 290px;
+    margin-right: 185px;
   }
 }
 
 .page-footer__social {
-  margin: 0;
-  padding: 0 59px;
+  margin: 0 auto;
 
   .border-bottom(1px; darken(@gray, 3%));
-  background-color: fade(#1133ff, 30%);
+}
+
+@media (min-width: @tablet) {
+  .page-footer__social {
+    border: none;
+    padding: 0 59px; /*added*/
+  }
 }
 
 .page-footer__copyright {
   margin: 0 auto;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .page-footer__copyright {
     margin: 0;
     margin-left: auto;

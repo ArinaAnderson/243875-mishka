@@ -27,20 +27,23 @@
       fill: fade(@light-green, 30%);
     }
   }
-
-  background-color: fade(#92258b, 40%);
 }
 
 .site-search__icon {
-  width: 21px;
-  height: 20px;
+  padding-left: 3px;
+}
+
+@media (min-width: @tablet) {
+  .site-search__icon {
+    margin-right: 0;
+  }
 }
 
 .site-search__icon path {
   fill: #d3d2d2;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .site-search__text {
     .visually-hidden();
   }

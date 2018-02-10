@@ -3,9 +3,15 @@
   padding: 0;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .specialties {
     display: flex;
+  }
+}
+
+@media (min-width: @desktop) {
+  .specialties {
+    .side-offset(50px);
   }
 }
 
@@ -13,7 +19,7 @@
   padding: 0;
 }
 
-@media (min-width: 770px) {
+@media (min-width: @tablet) {
   .specialties__item {
     flex-grow: 1;
   }
@@ -64,3 +70,16 @@
     background-color: #46c1ae;
   }
 }
+
+.specialties__link-wrapper {
+  width: 260px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet) {
+  .specialties__link-wrapper {
+    width: auto;
+  }
+}
+
+

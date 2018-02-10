@@ -1,0 +1,99 @@
+.order-form {
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 57px;
+  padding: 0 30px 0 30px;
+}
+
+@media (min-width: @tablet) {
+  .order-form {
+    margin-top: 22px;
+    margin-bottom: 35px;
+    .side-offset(0);
+  }
+}
+
+.order-form__section {
+  margin: 0;
+
+  border: none;
+  .border-top(1px; @light-green);
+}
+
+@media (min-width: @tablet) {
+  .order-form__section {
+    position: relative;
+
+    border-top: none;
+  }
+}
+
+.order-form__section-name {
+  margin: 0;
+  padding: 0;
+  padding-right: 25px;
+
+  font-size: 17px;
+  line-height: 17px;
+  color: @light-green;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet) {
+  .order-form__section-name {
+    position: absolute;
+    top: 0;
+  }
+}
+
+@media (min-width: @desktop) {
+  .order-form__section-name {
+    position: absolute;
+    top: 0;
+    left: 60px;
+  }
+}
+
+.order-form__group {
+  margin: 0;
+  padding: 0;
+}
+
+.order-form__label {
+  font-size: 17px;
+  line-height: 18px;
+}
+
+@media (min-width: @tablet) {
+  .order-form__label {
+    font-size: 19px;
+    line-height: 19px;
+  }
+}
+
+@media (min-width: @tablet) {
+  .order-form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 0;
+    .side-offset(50px);
+  }
+}
+
+@media (min-width: @desktop) {
+  .order-form__wrapper {
+    .side-offset(225px);
+  }
+}
+
+.order-form__button {
+  width: 100%;
+}
+
+@media (min-width: @tablet) {
+  .order-form__button {
+    width: 230px;
+    order: -1;
+  }
+}
