@@ -6,27 +6,24 @@
 
   &:hover {
     color: fade(#000000, 60%);
-
-    path {
-      fill: @light-green;
-    }
   }
 
   &:focus {
     color: fade(#000000, 60%);
-
-    path {
-      fill: @light-green;
-    }
   }
 
   &:active {
     color: fade(#000000, 30%);
-
-    path {
-      fill: fade(@light-green, 30%);
-    }
   }
+}
+
+.site-search:hover .site-search__icon,
+.site-search:focus .site-search__icon {
+  fill: @light-green;
+}
+
+.site-search:active .site-search__icon {
+  fill: fade(@light-green, 30%);
 }
 
 .site-search__icon {
@@ -39,7 +36,7 @@
   }
 }
 
-.site-search__icon path {
+.site-search__icon {
   fill: #d3d2d2;
 }
 
