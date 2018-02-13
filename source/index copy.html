@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HTML Academy: Мишка</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+   <!-- <link rel="stylesheet" href="css/style.css">-->
+
+    <style type="text/css">
+      .contacts__title {
+    position: relative;
+
+    margin-bottom: 23px;
+    padding-top: 14px;
+    font-size: 43px;
+    line-height: 50px;background-color: pink;
+  }
+.contacts-title::after {
+    content: "";
+
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+
+    width: 47px;
+    height: 81px;
+
+    /*background-image: url("../../img/icon-flag.svg");
+    background-repeat: no-repeat;*/
+    background-color: green;
+  }
+    </style>
+  </head>
+  <body class="page  page--toned">
+    
+
+    <main class="page-content">
+      
+      <section class="contacts">
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">Контакты</h2>
+          <table class="contacts__table-info">
+            <tr class="contacts__table-row">
+              <td class="contacts__table-cell kuku contacts__table-field">
+                e-mail:
+              </td>
+              <td class="contacts__table-cell  contacts__table-value">
+                <a class="contacts__link" href="#">
+                  info@mimimishkashop.ru
+                </a>
+              </td>
+            </tr>
+            <tr class="contacts__table-row">
+              <td class="contacts__table-cell  contacts__table-field">
+                адрес:
+              </td>
+              <td class="contacts__table-cell  contacts__table-value">
+                г. Санкт-Петербург,<br>
+                ул. Большая Конюшенная,<br>
+                д. 19/8, офис 101
+              </td>
+            </tr>
+          </table>
+        </div>
+        </section>
+    </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

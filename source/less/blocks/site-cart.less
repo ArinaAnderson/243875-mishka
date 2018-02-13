@@ -6,29 +6,26 @@
 
   &:hover {
     color: fade(#000000, 60%);
-
-    path {
-      fill: @light-green;
-    }
   }
 
   &:focus {
     color: fade(#000000, 60%);
-
-    path {
-      fill: @light-green;
-    }
   }
 
   &:active {
     color: fade(#000000, 30%);
-
-    path {
-      fill: fade(@light-green, 30%);
-    }
   }
 }
 
-.site-cart__icon path {
+.site-cart:hover .site-cart__icon,
+.site-cart:focus .site-cart__icon {
+  fill: @light-green;
+}
+
+.site-cart:active .site-cart__icon {
+  fill: fade(@light-green, 30%);
+}
+
+.site-cart__icon {
   fill: #d3d2d2;
 }

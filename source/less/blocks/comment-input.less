@@ -1,5 +1,7 @@
 .comment-input {
-  padding: 7px 0 12px 0;
+  position: relative;
+
+  padding: 22px 0 18px 0;
 }
 
 @media (min-width: @tablet) {
@@ -18,9 +20,16 @@
 }
 
 .comment-input__name {
+  top: 40px;
   left: 0;
 
-  margin-bottom: 20px;
+  width: 63px;
+  height: 20px;
+
+  /*margin-bottom: 20px;*/
+  margin-right: 25px;
+
+  background-color: #ffffff;
 }
 
 @media (min-width: @tablet) {
@@ -45,9 +54,9 @@
   width: 100%;
   min-height: 0;
   min-width: 0;
-  padding-top: 7px;
+  padding-top: 17px;
   padding-right: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 12px;
   padding-left: 15px;
   box-sizing: border-box;
 
@@ -63,7 +72,7 @@
 @media (min-width: @tablet) {
   .comment-input__field {
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 9px;
 
     font-size: 19px;
     line-height: 19px;

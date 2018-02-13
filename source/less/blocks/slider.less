@@ -1,18 +1,44 @@
 .slider__button {
+  position: relative;
+
   display: inline-block;
-  width: 130px;
+  width: 131px;
   height: 52px;
   box-sizing: border-box;
-  border: 1px solid red;
+  .border(1px; @gray);
+  background-repeat: no-repeat;
+  background-position: 37px 12px;
+  background-color: #ffffff;
 
   &--prev {
     margin-right: -0.45em;
     border-right: none;
+
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+
+  &--next {
+    background-image: url("../img/icon-right-arrow.svg");
+    
+  }
+
+  &:hover,
+  &:focus {
+    .border(1px; #dfdfdf);
+    opacity: 0.6;
+  }
+
+  &:active {
+    .border(1px; #bfbfbf);
+    opacity: 0.3;
   }
 }
 
 @media (min-width: @tablet) {
   .slider__button {
     width: 88px;
+
+    background-position: 17px 12px;
+    border: none;
   }
 }

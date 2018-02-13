@@ -20,7 +20,20 @@
 .item__link {
   display: block;
 
+  color: #000000;
   text-decoration: none;
+
+  &:hover {
+    color: fade(#000000, 60%);
+  }
+
+  &:focus {
+    color: fade(#000000, 60%);
+  }
+
+  &:active {
+    color: fade(#000000, 30%);
+  }
 }
 
 .item__image-container {
@@ -32,7 +45,7 @@
 @media (min-width: @tablet) {
   .item__image-container {
     width: 335px;
-    height: 330px;
+    height: 335px;
   }
 }
 
@@ -124,7 +137,7 @@
 @media (min-width: @tablet) {
   .item__to-buy {
     padding-top: 19px;
-    padding-bottom: 24px;
+    padding-bottom: 29px;
     .side-offset(5px);
 
     font-size: 17px;
@@ -137,7 +150,7 @@
     margin-top: 15px;
     padding-top: 22px;
     padding-bottom: 24px;
-    .side-offset(0);
+    padding-left: 0;
 
     font-size: 17px;
     line-height: 24px;

@@ -1,42 +1,43 @@
 .contacts {
+  width: 100%;
   position: relative;
 
   margin: 0;
-  .centre(0; @mobile);
-  padding: 40px 0 40px 0;
+  padding: 39px 0 40px 0;
   box-sizing: border-box;
 }
 
 @media (min-width: @tablet) {
   .contacts {
-    width: 770px;
-    padding: 60px 0 55px 0;
+    padding: 44px 0 58px 0;
   }
 }
 
 @media (min-width: @desktop) {
   .contacts {
-    width: 1150px;
-    padding: 70px 50px 110px 225px;background-color: fade(#44ff44, 30%);
+    .centre(50px; @desktop);
+    padding-left: 225px;
+    padding-bottom: 80px;
   }
 }
 
 .contacts__wrapper {
-  margin: 0;
-  .side-offset(30px);
+  .centre(30px; @mobile);
+  box-sizing: border-box;
 }
 
 @media (min-width: @tablet) {
   .contacts__wrapper {
-    .side-offset(50px);
+    .centre(50px; @tablet);
   }
 }
 
 @media (min-width: @desktop) {
   .contacts__wrapper {
+    width: auto;
     padding: 0;
-    padding-top: 70px;
-    padding-right: 475px;
+    padding-top: 78px;
+    padding-right: 527px;
   }
 }
 
@@ -49,16 +50,42 @@
 
 @media (min-width: @tablet) {
   .contacts__title {
-    margin-bottom: 20px;
+    position: relative;
+
+    margin-bottom: 23px;
+    padding-top: 14px;
+    padding-right: 100px;
     font-size: 43px;
     line-height: 50px;
+  }
+
+  .contacts-title::after {
+    content: "";
+
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 3px;
+
+    width: 47px;
+    height: 81px;
+
+    background-image: url("../../img/icon-flag.svg");
+    background-repeat: no-repeat;
+    background-color: red;
   }
 }
 
 @media (min-width: @desktop) {
   .contacts__title {
+    margin-bottom: 22px;
+    padding-right: 0;
     font-size: 53px;
     line-height: 57px;
+  }
+
+  .contacts-title::after {
+    left: -110px;
   }
 }
 
@@ -80,7 +107,7 @@
 @media (min-width: @tablet) {
   .contacts__table-info {
     width: 670px;
-    margin-bottom: 58px;
+    margin-bottom: 60px;
 
     font-size: 17px;
   }
@@ -103,7 +130,7 @@
 
 .contacts__table-cell {
   padding: 0;
-  padding-top: 30px;
+  padding-top: 29px;
 
   vertical-align: top;
 }
@@ -120,6 +147,9 @@
 }
 
 @media (min-width: @tablet) {
+  .contacts__table-cell {
+    padding-top: 25px;
+  }
   .contacts__table-value {
     width: 257px;
     padding-right: 20px;
@@ -127,6 +157,9 @@
 }
 
 @media (min-width: @desktop) {
+  .contacts__table-cell {
+    padding-top: 27px;
+  }
   .contacts__table-value {
     width: 273px;
     padding-right: 20px;
@@ -157,45 +190,83 @@
 }
 
 .contacts__map {
+  position: relative;
+  z-index: 12;
+
   width: 100%;
   height: 456px;
   text-align: center;
 }
 
-@media (min-width: @tablet) {
+@media (min-width: @desktop) {
   .contacts__map {
+    position: absolute;
+    top: 68px;
+    right: 50px;
+
+    width: 527px;
+    height: 460px;
+  }
+}
+
+.contacts__map-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  width: 320px;
+  height: 456px;
+
+  transform: translateX(-50%);
+}
+
+.contacts__map-image::before {
+  content: "";
+
+  position: absolute;
+  z-index: 9;
+  top: 140px;
+  left: 43%;
+
+  width: 66px;
+  height: 101px;
+
+  background-image: url(../img/icon-map-pin.svg);
+}
+
+@media (min-width: @tablet) {
+  .contacts__map-image {
+    width: 768px;
+    height: 457px;
     margin-left: 0;
+  }
+
+  .contacts__map-image::before {
+    top: 138px;
+    left: 362px;
   }
 }
 
 @media (min-width: @desktop) {
-  .contacts__map {
-    width: 525px;
-    height: 460px;
-    position: absolute;
-    top: 70px;
-    right: 50px;
+  .contacts__map-image {
+    width: 527px;
+    height: 457px;
   }
-}
 
-.contacts__map img {
-  width: 320px;
-}
-
-@media (min-width: @tablet) {
-  .contacts__map img {
-    margin-left: 0;
+  .contacts__map-image::before {
+    top: 145px;
+    left: 240px;
   }
 }
 
 .contacts__write-us {
-  margin: 40px 30px 0 30px;
+  margin: 35px 30px 0 30px;
 }
 
 @media (min-width: @tablet) {
   .contacts__write-us {
     width: 230px;
-    margin-top: 55px;
+    margin-top: 53px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -204,7 +275,8 @@
 @media (min-width: @desktop) {
   .contacts__write-us {
     width: 230px;
-    margin-top: 70px;
+    margin-top: 80px;
     margin-left: 0;
+    margin-bottom: 30px;
   }
 }

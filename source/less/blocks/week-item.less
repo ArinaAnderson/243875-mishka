@@ -1,16 +1,16 @@
 .week-item {
   margin: 0;
   .centre(30px; @mobile);
-  padding-top: 30px;
-  padding-bottom: 42px;
+  padding-top: 26px;
+  padding-bottom: 39px;
   box-sizing: border-box;
 }
 
 @media (min-width: @tablet) {
   .week-item {
     .centre(50px; @tablet);
-    padding-top: 50px;
-    padding-bottom: 70px;
+    padding-top: 35px;
+    padding-bottom: 73px;
   }
 }
 
@@ -19,8 +19,24 @@
     width: 1150px;
     position: relative;
 
-    padding-top: 70px;
+    padding-top: 72px;
     padding-bottom: 95px;
+  }
+
+  .week-item::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+
+    width: 1050px;
+    height: 24px;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-position: 25px 0;
+    background-size: contain;
   }
 }
 
@@ -28,7 +44,8 @@
   position: relative;
   z-index: 5;
 
-  margin-bottom: 30px;
+  margin-bottom: 27px;
+  padding: 0;
 }
 
 @media (min-width: @tablet) {
@@ -36,7 +53,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
   }
 }
 
@@ -44,7 +61,7 @@
   .week-item__title-wrapper {
     justify-content: flex-start;
     margin-top: 50px;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
   }
 }
 
@@ -63,6 +80,7 @@
   display: block;
   margin: 0;
   padding: 0;
+  padding-top: 2px;
 
   font-size: 17px;
   line-height: 20px;
@@ -73,8 +91,9 @@
 @media (min-width: @tablet) {
   .week-item__status {
     width: 70px;
-    padding: 0 27px;
+    padding: 0 25px;
     padding-top: 12px;
+    padding-right: 30px;
 
     line-height: 18px;
     text-align: center;
@@ -84,6 +103,7 @@
 @media (min-width: @desktop) {
   .week-item__status {
     width: 170px;
+    padding-top: 17px;
     box-sizing: border-box;
     order: -1;
   }
@@ -118,13 +138,13 @@
 
 @media (min-width: @desktop) {
   .week-item__text {
-    margin-bottom: 117px;
+    margin-bottom: 108px;
   }
 }
 
 .week-item__description {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   padding: 0;
 
   font-weight: 400;
@@ -135,7 +155,7 @@
 @media (min-width: @tablet) {
   .week-item__description {
     width: 290px;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 
     font-size: 17px;
     line-height: 30px;
@@ -144,7 +164,7 @@
 
 @media (min-width: @desktop) {
   .week-item__description {
-    margin-bottom: 55px;
+    margin-bottom: 47px;
   }
 }
 
@@ -159,7 +179,7 @@
 @media (min-width: @tablet) {
   .week-item__image {
     position: absolute;
-    top: 0;
+    top: 10px;
     right: 0;
 
     width: 334px;
@@ -199,6 +219,7 @@
 @media (min-width: @tablet) {
   .week-item__price {
     margin: 30px 0;
+    margin-bottom: 35px;
   }
 }
 

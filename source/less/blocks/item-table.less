@@ -21,7 +21,8 @@
 }
 
 .item-table__cell {
-  padding: 10px 10px 10px 0;
+  padding: 10px 10px;
+  padding-left: 0;
   box-sizing: border-box;
 }
 
@@ -32,3 +33,13 @@
 .item-table__value {
   width: 63.46%;
 }
+
+@media (min-width: @tablet) {
+  .item-table__field {
+    width: 33%;/*33.219178083;36.54%;*/
+  }
+  .item-table__value {
+    width: 67%;/*66.780821917%;63.46%;*/
+  }
+}
+
