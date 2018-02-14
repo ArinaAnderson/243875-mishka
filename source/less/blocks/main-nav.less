@@ -25,6 +25,7 @@
 @media (min-width: @desktop) {
   .main-nav {
     align-items: center;
+    max-width: 1150px;
     box-sizing: border-box;
   }
 }
@@ -290,6 +291,14 @@
     padding-left: 20px;
     padding-right: 70px;
     box-sizing: border-box;
+  }
+
+  .main-nav__promo-list::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 

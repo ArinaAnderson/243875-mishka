@@ -12,6 +12,12 @@
   font-size: 0;
 }
 
+@media (min-width: @tablet) {
+  .social {
+    padding-top: 28px;
+  }
+}
+
 .social__item {
   display: block;
 
@@ -20,4 +26,31 @@
 
 .social__item:nth-child(3n) {
   margin-right: 0;
+}
+
+.social__item--ig {
+  width: 22px;
+  height: 22px;
+}
+
+.social__item--fb {
+  width: 15px;
+  height: 28px;
+}
+
+.social__item--twitter {
+  width: 24px;
+  height: 22px;
+}
+
+.social__item[href]:hover .social__item-icon {
+  fill: #46c1ae;
+}
+
+.social__item[href]:focus .social__item-icon {
+  fill: #46c1ae;
+}
+
+.social__item[href]:active .social__item-icon {
+  fill: #bde3dd;
 }

@@ -23,12 +23,14 @@
 @media (min-width: @desktop) {
   .production-video {
     display: block;
-    width: 1150px;
-    min-height: 454px;
+    width: 1050px;
+    min-height: 455px;
     margin-top: 60px;
     margin-bottom: 107px;
-    padding: 0 50px 0 730px;
+    padding: 0 50px 0 680px;
     box-sizing: border-box;
+
+    .border(1px; @gray);
   }
 }
 
@@ -104,7 +106,7 @@
     height: 454px;
 
     position: absolute;
-    left: 50px;
+    left: 0; /*50px;*/
     top: 0;
   }
 }
@@ -178,7 +180,7 @@
 
 @media (min-width: @desktop) {
   .production-video__wrapper {
-    padding: 15px 55px 20px 80px;
+    padding: 15px 5px 20px 80px;
     border: none;
   }
 }
@@ -215,4 +217,10 @@
 
 .production-video__checkout {
   margin: 0;
+}
+
+@media (min-width: @desktop) {
+  .production-video__checkout {
+    width: 100%;
+  }
 }
