@@ -29,37 +29,20 @@
 
   width: 28px;
   height: 34px;
-
-  font-size: 0;
 }
 
-.copyright__link::before {
-  content: "";
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 28px;
-  height: 36px;
-
-  background-image: url("../img/htmlacademy_cr.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+.copyright__link:hover .copyright__icon,
+.copyright__link:focus .copyright__icon {
+  fill: #46c1ae;
 }
 
-.copyright__link:hover::before,
-.copyright__link:focus::before {
-  opacity: ;
-}
-
-.copyright__link:hover::active {
-  opacity: ;
+.copyright__link:active .copyright__icon{
+  fill: #bde3dd;
 }
 
 @media (min-width: @tablet) {
   .copyright__icon {
-    padding-top: 5px;
+    padding-top: 3px;
   }
 }
 

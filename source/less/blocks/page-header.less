@@ -22,15 +22,17 @@
     background-image: url(../img/bg-zigzag-fill.svg);
     background-position: -2px 0;
     background-repeat: repeat-x;
-    background-size: auto 23px;
+    background-size: contain;
   }
 }
 
 @media (min-width: @desktop) {
   .page-header::after {
+    box-sizing: border-box;
     bottom: -19px;
+    height: 37px;
     background-position: 8px 0;
-    background-size: auto 37px;
+    background-size: contain;
   }
 }
 

@@ -28,6 +28,21 @@
   }
 }
 
+@media (min-width: @desktop) {
+  .order-form__section {
+    position: relative;
+
+    .centre(0; @desktop);
+    box-sizing: border-box;
+
+    border-top: none;
+  }
+}
+
+.order-form--gray {
+  background-color: #f1f1f1;
+}
+
 .order-form__section-name {
   margin: 0;
   padding: 0;
@@ -83,7 +98,8 @@
 
 @media (min-width: @desktop) {
   .order-form__wrapper {
-    .side-offset(225px);
+    .centre(225px; @desktop);
+    box-sizing: border-box;
   }
 }
 
