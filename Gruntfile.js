@@ -5,6 +5,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-browser-sync");
   grunt.loadNpmTasks("grunt-contrib-watch");
   grunt.loadNpmTasks("grunt-postcss");
+  require("load-grunt-tasks")(grunt);
 
   grunt.initConfig({
     less: {
@@ -50,8 +51,61 @@ module.exports = function(grunt) {
         files: ["source/less/**/*.less"],
         tasks: ["less", "postcss"]
       }
+    },
+
+    csso: {
+      style: {
+        options: {
+          report: "gzip"
+        },
+        files: {
+          "source/css/style.min.css": ["source/css/style.css"]
+        }
+      }
+    }
+
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3,
+          progressive: true
+        },
+        files: [{
+          expand: true,
+          src: ["source/img/**/*.{png, jpg, svg}"]
+        }]
+      }
+    }
+
+    svgstore: {
+      options: {
+        includeTitleElement: false
+      },
+      sprite: {
+        files: {
+          "source/img/sprite.svg": ["source/img/icon-*.svg"]
+        }
+      }
+    }
+
+    posthtml: {
+      options: {
+        use: [
+          require("posthtml-include")()
+        ]
+      },
+      html: {
+        files:[{
+          expand: true,
+          src: ["source/*.html"]
+        }]
+      }
     }
   });
 
+
+
   grunt.registerTask("serve", ["browserSync", "watch"]);
+
+
 };
