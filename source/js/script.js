@@ -13,9 +13,9 @@ function init() {
     },
     {
       iconLayout: 'default#image',
-      iconImageHref: '../img/icon-map-pin.svg',
+      iconImageHref: '../img/map-pin.svg',
       iconImageSize: [66, 101],
-      iconImageOffset: [-30, -105],
+      iconImageOffset: [-28, -85],
     });
 
   map.geoObjects.add(placemark);

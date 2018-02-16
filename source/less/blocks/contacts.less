@@ -9,7 +9,7 @@
 
 @media (min-width: @tablet) {
   .contacts {
-    padding: 44px 0 58px 0;
+    padding: 43px 0 58px 0;
   }
 }
 
@@ -59,7 +59,7 @@
     line-height: 50px;
   }
 
-  .contacts-title::after {
+  .contacts__title::after {
     content: "";
 
     position: absolute;
@@ -70,9 +70,8 @@
     width: 47px;
     height: 81px;
 
-    background-image: url("../../img/icon-flag.svg");
+    background-image: url("../img/flag.svg");
     background-repeat: no-repeat;
-    background-color: red;
   }
 }
 
@@ -84,15 +83,16 @@
     line-height: 57px;
   }
 
-  .contacts-title::after {
-    left: -110px;
+  .contacts__title::after {
+    top: 5px;
+    left: -112px;
   }
 }
 
 .contacts__table-info {
   width: 260px;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 41px;
   padding: 0;
 
   font-weight: 400;
@@ -130,7 +130,7 @@
 
 .contacts__table-cell {
   padding: 0;
-  padding-top: 29px;
+  padding-top: 27px;
 
   vertical-align: top;
 }
@@ -233,7 +233,7 @@
   width: 66px;
   height: 101px;
 
-  background-image: url("../img/icon-map-pin.svg");
+  background-image: url("../img/map-pin.svg");
 }
 
 @media (min-width: @tablet) {

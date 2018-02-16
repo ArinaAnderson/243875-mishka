@@ -25,7 +25,7 @@
 @media (min-width: @desktop) {
   .main-nav {
     align-items: center;
-    max-width: 1150px;
+    width: 100%;
     box-sizing: border-box;
   }
 }
@@ -64,8 +64,7 @@
   .main-nav__logo {
     width: 149px;
     height: 72px;
-    margin: 9px 20px 6px 20px;
-    margin-left: 20px;
+    margin: 9px 100px 6px 20px;
   }
 }
 
@@ -150,6 +149,10 @@
   background-color: @light-green;
 }
 
+.main-nav__toggle--nojs {
+  display: none;
+}
+
 @media (min-width: @tablet) {
   .main-nav__toggle {
     display: none;
@@ -172,40 +175,12 @@
   }
 }
 
-.main-nav__wrapper {
-  &--closed {
-    display: none;
-  }
-
-  &--opened {
-    display: block;
-  }
+.main-nav__list--closed {
+  display: none;
 }
 
-@media (min-width: @tablet) {
-  .main-nav__wrapper {
-    display: flex;
-
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
-.main-nav__form {
-  margin: 0;
-  padding-top: 28px;
-  padding-bottom: 28px;
-  .side-offset(30px);
-
-  .border-top(1px; @gray);
-}
-
-@media (min-width: @tablet) {
-  .main-nav__form {
-    border-top: none;
-    .border-left(1px; @gray);
-    .border-right(1px; @gray);
-  }
+.main-nav__list--opened {
+  display: block;
 }
 
 .main-nav__cart {
@@ -226,53 +201,54 @@
   margin-right: 20px;
 }
 
-.main-nav__promo-wrapper {
+.main-nav__block {
   display: none;
   margin: 0;
   padding: 0;
-
   font-size: 15px;
   line-height: 24px;
+}
 
-  /*.border-top(1px; @gray);*/
+.main-nav__block--lightgray {
+  background-color: #f9f9f9;
+}
 
-  &--lightgray {
-    background-color: #f9f9f9;
+.main-nav__block--darkgray {
+  background-color: #f1f1f1;
+}
+
+@media (min-width: @tablet) {
+  .main-nav__block {
+    display: block;
+    order: 2; 
+    flex-grow: 1;
+    box-sizing: border-box;
   }
+}
 
-  &--darkgray {
-    background-color: #f1f1f1;
+@media (min-width: 1150px) {
+  .main-nav__block {
+    width: 100%;
+    border: none;
   }
+}
+
+.main-nav__promo-wrapper {
+  display: flex; 
+  border-top: 1px solid #e7e7e7;
 }
 
 @media (min-width: @tablet) {
   .main-nav__promo-wrapper {
-    display: flex;
-    order: 2;
-    flex-grow: 1;
-  }
+    justify-content: space-between;}
 }
 
 @media (min-width: @desktop) {
   .main-nav__promo-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    /*.side-offset(50px);*/
-
-    border: none;
-  }
-
-  .main-nav__promo-wrapper::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 1px;
-    background-color: @gray;
+    width: 1150px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -291,14 +267,6 @@
     padding-left: 20px;
     padding-right: 70px;
     box-sizing: border-box;
-  }
-
-  .main-nav__promo-list::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    right: 0;
   }
 }
 
