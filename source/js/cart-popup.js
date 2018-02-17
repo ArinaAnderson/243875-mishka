@@ -8,7 +8,7 @@ var largeSize=sizePicker.querySelector("[value=size-l]");
 
 openSizePickerItem.forEach(function(a) {
   a.addEventListener('click', function(evt) {
-    evt.preventDefault(); 
+    evt.preventDefault();
     sizePicker.classList.add('cart-window--opened');
     page.classList.add('page--overlay');
   })
