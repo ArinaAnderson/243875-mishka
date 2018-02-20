@@ -1,8 +1,8 @@
 .specialties {
-flex-grow: 1;/*NEW*/
-display: flex;/*NEW*/
-flex-direction: column;/*NEW*/
-justify-content: flex-end;/*NEW*/
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   list-style: none;
   padding: 0;
 }
@@ -52,10 +52,14 @@ justify-content: flex-end;/*NEW*/
 
   &--light-green {
     margin-top: 122px;
+
+    background-color: @light-green;
   }
 
   &--dark-green {
     margin-bottom: 5px;
+
+    background-color: @dark-green;
   }
 
   &::after {
@@ -76,14 +80,6 @@ justify-content: flex-end;/*NEW*/
 
   &:active {
     color: fade(#ffffff, 30%);
-  }
-
-  &--light-green {
-    background-color: @light-green;
-  }
-
-  &--dark-green {
-    background-color: @dark-green;
   }
 
   &--light-green:hover {
