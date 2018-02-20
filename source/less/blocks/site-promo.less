@@ -1,4 +1,8 @@
 .site-promo {
+  display: flex;
+  flex-direction: column;
+  min-height: 488px;
+
   background-position: center -20px;
   background-repeat: no-repeat;
   background-color: #f9f9f9;
@@ -52,22 +56,29 @@
   }
 }
 
+@media (min-width: @tablet) {
+  .site-promo {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .site-promo__title {
-  margin-bottom: 122px;
+  margin-bottom: 0;
 }
 
 @media (min-width: @tablet) {
   .site-promo__title {
     max-width: 500px;
     margin-top: 96px;
-    margin-bottom: 373px;
+    margin-bottom: 0;/*373px;*/
   }
 }
 
 @media (min-width: @desktop) {
   .site-promo__title {
     max-width: 615px;
-    margin-bottom: 361px;
+    /*margin-bottom: 361px;*/
   }
 }
 
